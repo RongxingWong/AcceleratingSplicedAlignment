@@ -21,7 +21,7 @@
 ### Code example:
 ```
 def find_mems_slamem(outfolder, read_path, refs_path, out_path, min_mem, batch_num, threads, index_path):
-    subprocess.check_call([ 'slaMEM-MT-i', '-l' , str(min_mem),  refs_path, read_path, '-o', out_path, '-p', str(batch_num), '-t', str(threads), '-i' , index_path], stdout=stdout_file, stderr=stderr_file)
+    subprocess.check_call([ 'PMEM', '-l' , str(min_mem),  refs_path, read_path, '-o', out_path, '-p', str(batch_num), '-t', str(threads), '-i' , index_path], stdout=stdout_file, stderr=stderr_file)
 
 
 batch_args.append((args.outfolder, read_batch, ref_path, mummer_batch_out_path, args.min_mem, "50000", "16", args.index))
